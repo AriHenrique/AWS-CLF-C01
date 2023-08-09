@@ -199,3 +199,36 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
 ### AWS Outspots
 
 - Basicamente a AWS, colocando os equipamentos dela e as conexões rápidas dentro de data centers de terceiros, dentro de empresas que precisam isso ou dentro de locais que têm uma região de cobertura muito boa.
+
+
+### IAM
+
+- O AWS IAM (**_Identity and Access Management_**) é um serviço da Amazon Web Services que permite controlar quem pode acessar quais recursos na nuvem da AWS. Ele define permissões para usuários, grupos e papéis, garantindo a segurança e a conformidade dos dados e serviços na nuvem.
+
+- >***Usuários***:
+   >>Usuários são indivíduos ou processos que precisam acessar recursos na AWS.
+   >
+   >>Cada usuário tem credenciais únicas (nome de usuário e senha) para fazer login na conta da AWS.
+   >
+   >>As permissões são concedidas diretamente aos usuários para determinar o que eles podem fazer.
+
+- >***Grupos***:
+   >>Grupos são coleções de usuários que compartilham as mesmas permissões.
+   >
+   >>Em vez de atribuir permissões individualmente, você atribui políticas aos grupos, simplificando a administração.
+   >
+   >>Isso é útil para categorizar usuários com funções semelhantes e aplicar permissões consistentes.
+
+- >***Roles***:
+   >>Roles são usados para conceder permissões temporárias a entidades confiáveis.
+   >
+   >>São frequentemente usados por serviços ou aplicativos que precisam acessar recursos em nome deles, sem compartilhar credenciais.
+   >
+   >>Roles podem ser assumidos por serviços internos da AWS ou por serviços externos.
+
+- >***Políticas***:
+   >>Políticas são documentos JSON que definem as permissões.
+   >
+   >>Elas especificam quais ações são permitidas ou negadas em recursos específicos.
+   >
+   >>Políticas podem ser anexadas a usuários, grupos e papéis para controlar o acesso.
