@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<style>
-  blockquote {
-    border-left: 4px solid blue;
-    padding: 10px;
-    margin-left: 10px;
-  }
- #exemplo1 blockquote {
-    border-left: 4px solid red;
-    padding: 10px;
-    margin-left: 10px;
-  }
-</style>
-
 # Revisao para o Exame Amazon Certificação AWS Cloud Practitioner CLF-C01
 
 ### O que é _Cloud Computing?_
@@ -55,50 +36,50 @@
 ### Serviços dentro da AWS
 
 
-1. >***Computação***:<div id="exemplo1">
+1. >***Computação***:
     >> * Amazon EC2 (Elastic Compute Cloud): Máquinas virtuais escaláveis na nuvem.
     > 
-    >> * AWS Lambda: Execução de código sem provisionamento de servidores.</div>
+    >> * AWS Lambda: Execução de código sem provisionamento de servidores.
 
-1. >***Armazenamento***:<div id="exemplo1">
+1. >***Armazenamento***:
     >> * Amazon S3 (Simple Storage Service): Armazenamento de objetos escalável.
     > 
-    >> * Amazon EBS (Elastic Block Store): Armazenamento persistente para instâncias EC2.</div>
+    >> * Amazon EBS (Elastic Block Store): Armazenamento persistente para instâncias EC2.
 
-1. >***Banco de Dados***:<div id="exemplo1">
+1. >***Banco de Dados***:
    >> * Amazon RDS (Relational Database Service): Bancos de dados relacionais gerenciados.
    >  
-   >> * Amazon DynamoDB: Banco de dados NoSQL totalmente gerenciado.</div>
+   >> * Amazon DynamoDB: Banco de dados NoSQL totalmente gerenciado.
 
-1. >***Rede***:<div id="exemplo1">
+1. >***Rede***:
    >> * Amazon VPC (Virtual Private Cloud): Rede isolada e personalizável.
    >  
-   >> * Amazon CloudFront: CDN (Content Delivery Network) para distribuição de conteúdo.</div>
+   >> * Amazon CloudFront: CDN (Content Delivery Network) para distribuição de conteúdo.
 
-1. >***Análise de Dados***:<div id="exemplo1">
+1. >***Análise de Dados***:
    >> * Amazon Redshift: Data warehouse para análise de dados.
    >  
-   >> * Amazon EMR (Elastic MapReduce): Processamento e análise de big data.</div>
+   >> * Amazon EMR (Elastic MapReduce): Processamento e análise de big data.
 
-1. >***IA e Aprendizado de Máquina***:<div id="exemplo1">
+1. >***IA e Aprendizado de Máquina***:
    >> * Amazon SageMaker: Plataforma para desenvolvimento e implantação de modelos de ML.
    >  
-   >> * Amazon Rekognition: Serviço de análise de imagem e vídeo.</div>
+   >> * Amazon Rekognition: Serviço de análise de imagem e vídeo.
 
-1. >***Segurança***:<div id="exemplo1">
+1. >***Segurança***:
    >> * AWS IAM (Identity and Access Management): Gerenciamento de identidades e acesso.
    >  
-   >> * AWS WAF (Web Application Firewall): Proteção de aplicativos web contra ameaças.</div>
+   >> * AWS WAF (Web Application Firewall): Proteção de aplicativos web contra ameaças.
 
-1. >***DevOps***:<div id="exemplo1">
+1. >***DevOps***:
    >> * AWS CodePipeline: Automação de pipelines de entrega contínua.
    >  
-   >> * AWS CodeDeploy: Implantação automatizada de aplicativos.</div>
+   >> * AWS CodeDeploy: Implantação automatizada de aplicativos.
 
-1. >***Internet das Coisas (IoT)***:<div id="exemplo1">
+1. >***Internet das Coisas (IoT)***:
    >> * AWS IoT Core: Plataforma para conectar dispositivos IoT à nuvem.
    >  
-   >> * AWS IoT Greengrass: Extensão da nuvem para dispositivos IoT locais.</div>
+   >> * AWS IoT Greengrass: Extensão da nuvem para dispositivos IoT locais.
 
 ### As responsabilidades são divididas da seguinte forma
 
@@ -133,7 +114,7 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
 
 - Cada região é projetada para ser independente, com suas próprias instâncias de serviços da AWS, e oferece alta disponibilidade. Dentro de cada região, as zonas de disponibilidade são separadas fisicamente, permitindo redundância e resiliência adicionais.
 
-1. >***Américas***:<div id="exemplo1">
+1. >***Américas***:
    >> Leste dos EUA (Norte da Virgínia)
    >
    >> Leste dos EUA (Ohio)
@@ -144,7 +125,7 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
    >
    >> Canadá (Central)
 
-1. >***Europa***:<div id="exemplo1">
+1. >***Europa***:
    >> UE (Irlanda)
    >
    >> UE (Londres)
@@ -155,7 +136,7 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
    >
    >> UE (Milão)
 
-1. >***Ásia-Pacífico***:<div id="exemplo1">
+1. >***Ásia-Pacífico***:
    >> Ásia-Pacífico (Tóquio)
    >> Ásia-Pacífico (Cingapura)
    >
@@ -167,10 +148,10 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
    >
    >> Ásia-Pacífico (Hong Kong)
 
-1. >***América do Sul***:<div id="exemplo1">
+1. >***América do Sul***:
    >> América do Sul (São Paulo)
 
-1. >***África***:<div id="exemplo1">
+1. >***África***:
    >> África (Cidade do Cabo)
    
 ###  Zonas de Disponibilidade
@@ -218,7 +199,3 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
 ### AWS Outspots
 
 - Basicamente a AWS, colocando os equipamentos dela e as conexões rápidas dentro de data centers de terceiros, dentro de empresas que precisam isso ou dentro de locais que têm uma região de cobertura muito boa.
-
-
-</body>
-</html>
