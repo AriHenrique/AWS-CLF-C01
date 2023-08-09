@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 <style>
   blockquote {
     border-left: 4px solid blue;
@@ -10,7 +16,6 @@
     margin-left: 10px;
   }
 </style>
-
 
 # Revisao para o Exame Amazon Certificação AWS Cloud Practitioner CLF-C01
 
@@ -215,3 +220,5 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
 - Basicamente a AWS, colocando os equipamentos dela e as conexões rápidas dentro de data centers de terceiros, dentro de empresas que precisam isso ou dentro de locais que têm uma região de cobertura muito boa.
 
 
+</body>
+</html>
