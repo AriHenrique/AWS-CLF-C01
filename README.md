@@ -1,10 +1,13 @@
 # Revisao para o Exame Amazon Certificação AWS Cloud Practitioner CLF-C01
 
+
+## Conceitos de Cloud
+
 ### O que é _Cloud Computing?_
 
 - Cloud computing é o fornecimento de recursos de computação, como servidores, armazenamento e serviços, através da internet, permitindo escalabilidade e pagamento conforme o uso.
 
-### Vantagens
+***Vantagens***
 - As vantagens do cloud computing incluem escalabilidade sob demanda, pagamento conforme o uso, flexibilidade na alocação de recursos, redundância e recuperação de dados aprimoradas, além de permitir o acesso remoto e colaboração eficiente.
 
 ###  Tipos de serviços em cloud computing
@@ -33,7 +36,7 @@
 1. >***Nuvem Comunitária***: Recursos são compartilhados por várias organizações com interesses e requisitos comuns, visando a colaboração e o compartilhamento de recursos de maneira mais restrita.
 
 
-### Serviços dentro da AWS
+## Serviços dentro da AWS
 
 
 1. >***Computação***:
@@ -156,7 +159,7 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
    
 ###  Zonas de Disponibilidade
 
-- As Zonas de Disponibilidade (Availability Zones) da Amazon Web Services (AWS) são unidades de infraestrutura isoladas e fisicamente separadas dentro de uma região. Cada Zona de Disponibilidade é projetada para ser altamente resiliente e independente, com sua própria infraestrutura de energia, resfriamento e rede. A ideia por trás das Zonas de Disponibilidade é fornecer aos clientes da AWS uma maneira de construir aplicativos altamente disponíveis e tolerantes a falhas, aproveitando a redundância entre as Zonas.
+- As Zonas de Disponibilidade (Availability Zones) da AWS são unidades de infraestrutura isoladas e fisicamente separadas dentro de uma região. Cada Zona de Disponibilidade é projetada para ser altamente resiliente e independente, com sua própria infraestrutura de energia, resfriamento e rede. A ideia por trás das Zonas de Disponibilidade é fornecer aos clientes da AWS uma maneira de construir aplicativos altamente disponíveis e tolerantes a falhas, aproveitando a redundância entre as Zonas.
 
 - >***Isolamento Físico***: Cada Zona de Disponibilidade é composta por um ou mais data centers separados, que são projetados para suportar falhas independentes. Isso garante que problemas em uma Zona não afetem as outras.
 
@@ -178,7 +181,7 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
 
 ### AWS Wavelength
 
-- O AWS Wavelength é um serviço da Amazon Web Services (AWS) que estende a infraestrutura da AWS para as bordas das redes de telecomunicações. Ele permite que aplicativos e serviços sejam implantados diretamente nos pontos de presença de operadoras de telecomunicações, proporcionando baixa latência e alta conectividade para dispositivos móveis e usuários finais.
+- O AWS Wavelength é um serviço da AWS que estende a infraestrutura da AWS para as bordas das redes de telecomunicações. Ele permite que aplicativos e serviços sejam implantados diretamente nos pontos de presença de operadoras de telecomunicações, proporcionando baixa latência e alta conectividade para dispositivos móveis e usuários finais.
 
 
 - O AWS Wavelength é uma solução que visa atender às crescentes demandas por baixa latência em aplicações modernas que dependem de interações em tempo real. Ele permite que as organizações aproveitem a escala e a flexibilidade da infraestrutura da AWS, ao mesmo tempo em que entregam uma experiência de usuário mais rápida e responsiva. 
@@ -201,7 +204,7 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
 - Basicamente a AWS, colocando os equipamentos dela e as conexões rápidas dentro de data centers de terceiros, dentro de empresas que precisam isso ou dentro de locais que têm uma região de cobertura muito boa.
 
 
-### IAM
+## IAM
 
 - O AWS IAM (**_Identity and Access Management_**) é um serviço da Amazon Web Services que permite controlar quem pode acessar quais recursos na nuvem da AWS. Ele define permissões para usuários, grupos e papéis, garantindo a segurança e a conformidade dos dados e serviços na nuvem.
 
@@ -232,3 +235,157 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
    >>Elas especificam quais ações são permitidas ou negadas em recursos específicos.
    >
    >>Políticas podem ser anexadas a usuários, grupos e papéis para controlar o acesso.
+
+
+## EC2 -  _Elastic (Computing Cloud)²_ 
+
+- Amazon EC2 (Elastic Compute Cloud) é um serviço de computação em nuvem oferecido pela AWS que permite provisionar e gerenciar servidores virtuais na nuvem. EC2 é um dos principais serviços da AWS e oferece uma forma escalável e flexível de executar cargas de trabalho em máquinas virtuais, conhecidas como "instâncias EC2".
+
+
+***Principais características do Amazon EC2***:
+
+1. >***Instâncias EC2***: São as unidades de processamento do Amazon EC2. Você pode escolher entre várias configurações de instâncias, como tamanho da CPU, quantidade de memória e armazenamento.
+
+1. >***Escalabilidade***: As instâncias EC2 podem ser escaladas verticalmente (aumentando o tamanho) ou horizontalmente (adicionando mais instâncias) para lidar com variações de carga.
+
+1. >***Seleção de Sistema Operacional***: Você pode escolher entre diversos sistemas operacionais, como Amazon Linux, Windows Server, Ubuntu, entre outros.
+
+1. >***Tipos de Instância***: A AWS oferece diversos tipos de instâncias otimizados para diferentes casos de uso, como computação geral, memória intensiva, armazenamento otimizado e mais.
+
+1. >***Opções de Armazenamento***: EC2 oferece opções de armazenamento variadas, incluindo armazenamento local, Amazon EBS (Elastic Block Store) e armazenamento em instâncias.
+
+1. >***Segurança***: As instâncias EC2 podem ser isoladas em uma rede privada virtual (VPC), permitindo controle total sobre a rede e a segurança.
+
+1. >***Opções de Preços***: EC2 oferece opções de preços flexíveis, incluindo instâncias sob demanda, reservadas e spot instances (ofertas de instâncias ociosas com preços mais baixos).
+
+1. >***Recursos Avançados***: EC2 oferece recursos avançados, como Load Balancing (balanceamento de carga), Auto Scaling (escalabilidade automática) e Elastic IP (endereços IP estáticos).
+
+
+***User Data***
+
+- O _"User Data"_ (Dados do Usuário) é um conceito utilizado na EC2 e em outras instâncias de máquinas virtuais para automatizar tarefas de configuração durante a inicialização. Quando você inicia uma instância EC2, pode fornecer um script ou conjunto de comandos chamado _"User Data"_, que será executado automaticamente quando a instância for iniciada pela primeira vez.
+
+
+***Principais pontos sobre _"User Data"_***
+
+1. >***Automação de Configuração***: O _"User Data"_ permite automatizar a configuração da instância EC2 no momento da inicialização, sem a necessidade de intervenção manual.
+
+1. >***Scripts e Comandos***: O _"User Data"_ normalmente consiste em scripts, comandos ou instruções em shell que são executados sequencialmente.
+
+1. >***Exemplos de Uso***: O _"User Data"_ pode ser usado para instalar software, atualizar pacotes, configurar servidores web, baixar arquivos, configurar variáveis de ambiente, entre outros.
+
+1. >***Ambientes Escaláveis***: O _"User Data"_ é especialmente útil em ambientes de Auto Scaling, onde novas instâncias são criadas ou substituídas conforme necessário.
+
+1. >***Formatação de Dados***: Geralmente, o _"User Data"_ é fornecido em texto simples ou codificado em base64, dependendo da plataforma e das necessidades.
+
+1. >***Exemplo Prático***: Um exemplo simples de uso seria fornecer um script que configura um servidor web Apache e hospeda um site específico assim que a instância EC2 é iniciada.
+
+
+### AWS Batch
+
+- O AWS Batch é um serviço da AWS que permite executar facilmente cargas de trabalho de processamento em lote na nuvem. Ele gerencia automaticamente a escalabilidade, o provisionamento de recursos e a execução de tarefas em lote, tornando mais eficiente o processamento de grandes volumes de dados.
+
+
+- O AWS Batch é particularmente útil para cargas de trabalho que exigem processamento de dados em lote, como análises de big data, transformações de dados, renderização de vídeo, simulações e muito mais.
+
+
+
+***Principais características do AWS Batch***:
+
+1. >***Agendamento e Gerenciamento***: O AWS Batch permite agendar e gerenciar a execução de tarefas em lote, como processamento de dados, análises, transformações, entre outros.
+
+1. >***Escalabilidade Automática***: O serviço ajusta automaticamente a quantidade de recursos necessários para executar as tarefas em lote, otimizando o desempenho e economizando custos.
+
+1. >***Tarefas em Lote***: As tarefas em lote são unidades discretas de trabalho que podem ser processadas de forma independente, como contêineres Docker ou scripts.
+
+1. >***Integração com Outros Serviços***: O AWS Batch se integra com outros serviços da AWS, como Amazon S3, Amazon DynamoDB e Amazon ECS (Elastic Container Service), para facilitar o processamento de dados.
+
+1. >***Fila de Trabalho***: O AWS Batch utiliza uma fila de trabalho para agendar e gerenciar tarefas, permitindo a priorização e o controle sobre a execução.
+
+1. >***Definição de Recursos***: Você pode definir os recursos necessários para suas tarefas, como a quantidade de CPU, memória e armazenamento.
+
+1. >***Monitoramento e Logging***: O AWS Batch fornece métricas e registros para acompanhar o status e o desempenho das tarefas em lote.
+
+
+### AWS LightSail
+
+- O Amazon Lightsail é um serviço simplificado de computação em nuvem oferecido pela AWS. Ele é projetado para facilitar o processo de lançamento e gerenciamento de aplicativos e sites, especialmente para usuários que estão começando com a nuvem e não possuem experiência técnica avançada. O Lightsail oferece uma maneira fácil de iniciar rapidamente recursos de infraestrutura sem a complexidade de outros serviços da AWS.
+
+
+- O Amazon Lightsail é uma opção popular para indivíduos, pequenas empresas e equipes de desenvolvimento que buscam uma maneira rápida e descomplicada de começar a usar a computação em nuvem da AWS. É uma escolha especialmente útil para projetos menores que não exigem toda a complexidade de configuração e gerenciamento que outros serviços da AWS oferecem.
+
+
+***Principais características do Amazon Lightsail***:
+
+1. >***Simplicidade***: O Lightsail oferece uma interface de usuário simples e intuitiva, tornando mais fácil a implantação de aplicativos e sites.
+
+1. >***Opções Predefinidas***: Ele fornece planos predefinidos que incluem recursos como instâncias de máquinas virtuais, armazenamento em bloco, bancos de dados e serviços de rede.
+
+1. >***Fácil Implantação***: Com apenas alguns cliques, você pode lançar aplicativos, sites ou bancos de dados preconfigurados.
+
+1. >***Gerenciamento Simplificado***: O Lightsail automatiza tarefas de gerenciamento, como backups, monitoramento e escalabilidade, para reduzir a carga de trabalho.
+
+1. >***Integração com Serviços AWS***: Embora seja simplificado, o Lightsail pode ser integrado a outros serviços da AWS, permitindo escalabilidade e expansão futura.
+
+1. >***Precificação Transparente***: Os preços são fixos e previsíveis, o que facilita o planejamento financeiro.
+
+1. >***Variedade de Aplicações***: O Lightsail pode ser usado para hospedar sites, blogs, aplicativos web, aplicativos móveis, entre outros.
+
+1. >***Atualização para AWS***: Se suas necessidades crescerem, é possível migrar facilmente do Lightsail para outros serviços da AWS sem grandes mudanças na arquitetura.
+
+
+### ECS 
+
+- O Amazon Elastic Container Service (Amazon ECS) é um serviço de orquestração de contêineres oferecido pela AWS. Ele permite implantar, gerenciar e dimensionar aplicativos em contêineres Docker de maneira eficiente na nuvem. O ECS facilita a execução de aplicativos distribuídos e baseados em microserviços usando a tecnologia de contêineres.
+
+
+- O Amazon ECS é adequado para arquiteturas de aplicativos baseados em contêineres, como microserviços, em que vários componentes podem ser implantados, gerenciados e dimensionados independentemente. Ele ajuda a simplificar o processo de implantação de contêineres, permitindo que os desenvolvedores se concentrem mais no código e menos na infraestrutura.
+
+***Principais características do Amazon ECS***:
+
+1. >***Contêineres Docker***: O ECS permite empacotar e executar aplicativos em contêineres Docker, proporcionando isolamento e portabilidade para suas cargas de trabalho.
+
+1. >***Orquestração de Contêineres***: Ele automatiza a implantação e o gerenciamento de contêineres em clusters de máquinas virtuais EC2 (ou usando o serviço AWS Fargate).
+
+1. >***Clusters***: Os clusters do ECS são grupos de instâncias EC2 (ou tarefas do Fargate) onde os contêineres são executados.
+
+1. >***Tarefas e Serviços***: No ECS, você define tarefas que contêm uma ou mais definições de contêineres. Os serviços garantem que um número específico de tarefas esteja sempre em execução.
+
+1. >***Integração com Outros Serviços***: O ECS integra-se a serviços como Amazon EC2, Amazon ECR (Elastic Container Registry), Amazon VPC (Virtual Private Cloud) e Amazon CloudWatch.
+
+1. >***Escalabilidade***: O ECS facilita a escalabilidade horizontal de aplicativos, ajustando automaticamente o número de tarefas em execução.
+
+1. >***Gerenciamento de Recursos***: Ele gerencia recursos de infraestrutura, como provisionamento, balanceamento de carga, monitoramento e escalabilidade.
+
+1. >***Integração com Ferramentas***: O ECS trabalha bem com ferramentas populares de orquestração de contêineres, como Docker Compose e Kubernetes.
+
+
+### ECS Cluster com Instâncias EC2
+
+- Um ECS cluster é um grupo lógico de instâncias EC2 que são usadas para executar contêineres.
+
+
+- Você precisa provisionar e gerenciar as instâncias EC2 por conta própria, incluindo escalabilidade, atualizações e segurança.
+
+
+- O ECS permite que você configure um cluster usando instâncias EC2, onde os contêineres são implantados nas instâncias que compõem o cluster.
+
+
+- Você tem controle total sobre o ambiente de hospedagem, incluindo personalizações de sistema operacional e configurações de rede.
+
+### AWS Fargate
+
+- O AWS Fargate é uma opção de execução para o ECS (e também para o Amazon EKS), que remove a necessidade de gerenciar instâncias EC2.
+
+
+- Com o Fargate, você não precisa se preocupar com a infraestrutura subjacente. Em vez disso, a AWS cuida do provisionamento e da administração da infraestrutura.
+
+
+- O Fargate permite que você defina tarefas (conjuntos de contêineres) e as execute sem precisar gerenciar as instâncias que as hospedam.
+
+
+- Isso torna a execução de contêineres mais abstrata, focando apenas nos recursos de aplicativos em vez da infraestrutura.
+
+### Resumo ECS
+
+- Um ECS cluster é um grupo de instâncias EC2 que você gerencia manualmente para executar contêineres, enquanto o AWS Fargate é uma opção gerenciada pelo AWS que permite executar contêineres sem a necessidade de provisionar ou gerenciar instâncias EC2. A escolha entre essas opções depende das suas necessidades de controle sobre a infraestrutura e da preferência por abstrair ou gerenciar mais os recursos de hospedagem.
