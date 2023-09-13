@@ -389,3 +389,38 @@ Isso inclui a configuração e gerenciamento de permissões de acesso, seguranç
 ### Resumo ECS
 
 - Um ECS cluster é um grupo de instâncias EC2 que você gerencia manualmente para executar contêineres, enquanto o AWS Fargate é uma opção gerenciada pelo AWS que permite executar contêineres sem a necessidade de provisionar ou gerenciar instâncias EC2. A escolha entre essas opções depende das suas necessidades de controle sobre a infraestrutura e da preferência por abstrair ou gerenciar mais os recursos de hospedagem.
+
+## S3
+
+- O Amazon Simple Storage Service (Amazon S3) é um serviço de armazenamento altamente escalável e durável oferecido pela Amazon Web Services (AWS). Ele é projetado para armazenar e recuperar grandes volumes de dados de maneira eficiente e segura. O Amazon S3 oferece diferentes categorias de armazenamento para atender a diversas necessidades de desempenho, custo e durabilidade.
+
+
+- Essas categorias de armazenamento do Amazon S3 permitem que você escolha a melhor opção para suas necessidades específicas de custo, durabilidade e acesso. Você pode combinar essas categorias conforme necessário para otimizar o uso de armazenamento em sua aplicação ou negócio.
+
+
+1. >***S3 Standard***:
+Essa é a categoria padrão de armazenamento do Amazon S3.
+Ela fornece alta durabilidade, alta disponibilidade e baixa latência.
+É ideal para casos de uso gerais, como armazenamento de dados, backups e distribuição de conteúdo.
+
+1. >***S3 Intelligent-Tiering***:
+Essa categoria monitora a atividade dos objetos e move automaticamente os objetos para a camada de acesso mais apropriada.
+Ela otimiza os custos, movendo objetos menos acessados para uma camada de armazenamento de baixo custo e objetos mais acessados para uma camada de armazenamento de alto desempenho.
+
+1. >***S3 Standard-IA (Infrequent Access)***:
+Projetada para objetos que são acessados com menos frequência, mas ainda requerem recuperação rápida quando necessário.
+Oferece um custo mais baixo em comparação com o S3 Standard, mas com uma taxa de recuperação um pouco mais alta.
+
+1. >***S3 One Zone-IA***:
+Similar ao S3 Standard-IA, mas armazena dados em apenas uma zona de disponibilidade, tornando-a mais econômica.
+Apropriada para dados que podem ser recriados ou reproduzidos facilmente em caso de falha.
+
+1. >***S3 Glacier***:
+Projetada para armazenamento de longo prazo e arquivamento.
+Oferece uma latência maior para recuperação (horas), mas com custos substancialmente mais baixos.
+Adequada para dados que raramente precisam ser acessados.
+
+1. >***S3 Glacier Deep Archive***:
+A opção mais econômica para arquivamento de longo prazo.
+Oferece a recuperação mais lenta (12 horas), mas é adequada para dados que têm requisitos de recuperação extremamente rígidos.
+
