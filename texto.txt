@@ -1,0 +1,298 @@
+Hoje vamos orientar você no processo de instalação das
+
+ferramentas complementares usadas para coletar o
+
+inventário local e a utilização para o seu caso de negócios para o AWS com o Migration
+
+Evaluator.
+
+Assim que sua solicitação de um caso de negócios for processada, você receberá um
+
+convite por e -
+
+mail. Basta criar uma conta no console de gerenciamento do Migration Evaluator e você terá acesso aos guias,
+
+software e tudo o mais necessário para implantar o software.
+
+Reserve um tempo para revisar a Lista de verificação de pré-instalação encontrada no
+
+guia de instalação para obter as especificações de servidor apropriadas,
+
+versão em inglês do Windows Server Windows, direitos de administrador,
+
+conectividade de rede e permissões necessárias.
+
+Ter a configuração necessária desde o início simplificará a implantação.
+
+O primeiro passo será instalar, como administrador local, o Bootstrapper que
+Install the Migration Evaluator Bootstrapper
+
+instala automaticamente quaisquer pacotes de software de terceiros ausentes.
+
+Isso inclui o tempo de execução do .NET e a instância local do MariaDB.
+
+Se uma unidade diferente de C foi alocada para atender aos requisitos de armazenamento
+
+, clique em Opções e selecione a unidade correta.
+
+A segunda etapa é instalar, como administrador local, o software coletor.
+
+Para garantir que seu inventário seja acessível apenas para sua avaliação,
+
+cada coletor tem um certificado exclusivo fornecido pela AWS
+
+e é baixado do Migration Evaluator Management Console.
+
+Você será solicitado a selecionar o arquivo de certificado durante a instalação.
+
+Em seguida, você será solicitado a executar o coletor em uma
+
+conta do sistema local ou na conta de serviço criada antes da instalação.
+
+Reveja os Requisitos do Sistema e Guia de Instalação para obter mais detalhes
+
+sobre contas de serviço. Observe que a conta selecionada
+
+NÃO PODE ser alterada após a instalação.
+
+Em seguida, selecione HTTPS para exigir criptografia com o aplicativo IIS
+
+e selecione SIM para iniciar automaticamente o serviço de coleta assim que a
+
+sequência de instalação terminar.
+
+A etapa final da instalação do software é criar uma conta local para
+
+gerenciar o coletor. Esta não será a conta que você criou
+
+para baixar o software. Basta iniciar um navegador e inserir
+
+as credenciais desejadas. Se você esquecer sua senha,
+
+uma chave de recuperação exclusiva é salva no sistema de arquivos do coletor e pode ser usada
+
+para criar uma nova conta.
+Configure Collection from VMware
+
+A terceira etapa é configurar a coleta do VMware.
+
+Se você não tiver uma infraestrutura VMware para monitorar, pule para a próxima
+
+seção deste vídeo.
+
+No software coletor, selecione Add Data Provider e VMware vSphere.
+
+Você será solicitado a inserir um rótulo descritivo, o endereço do
+
+dispositivo vSphere e as credenciais somente leitura.
+
+Após pressionar SALVAR, você verá o nome do vCenter
+
+adicionado na lista de Provedores de Dados.
+
+Selecione-o e verifique o status para garantir que o vCenter diga "Online".
+
+Como é comum que as instâncias do vSphere sejam implantadas com um
+
+certificado autoassinado , pode ser necessário desativar a
+
+validação do certificado SSL ou corrigir o certificado instalado no
+
+vCenter que está sendo monitorado. Depois de fazer a alteração na configuração,
+
+você pode forçar o software a tentar se conectar novamente, selecionando
+
+"Status avançado" e "Forçar coleta de dados".
+
+Repita esse processo para cada aplicativo vSphere a ser incluído na
+
+avaliação.
+Configure Operating System Credentials
+
+A Etapa Quatro é configurar as credenciais WMI ou SNMP somente leitura a serem usadas pelo
+
+coletor. Pule para a próxima seção deste
+
+vídeo se o seu ambiente for apenas VMware e você quiser dimensionar com base apenas
+
+na utilização do hipervisor. No software coletor, navegue até
+
+Configurações globais e selecione a guia Credenciais do sistema operacional.
+
+Cada credencial adicionada pode ser usada posteriormente para monitorar máquinas virtuais diretamente,
+
+bare metal ou infraestrutura de sistema host Hyper-V.
+
+Você pode inserir quantos forem necessários e o software detectará automaticamente
+
+o correto a ser usado em cada servidor.
+
+A Etapa Cinco é configurar a coleção de servidores bare metal.
+Configure Collection from Bare Metal Servers
+
+Se você não tiver uma infraestrutura bare metal para monitorar, pule para
+
+a próxima seção deste vídeo. Para começar, você precisará criar um arquivo CSV
+
+contendo a lista de servidores a serem monitorados.
+
+consulte os requisitos do sistema e o guia de instalação para obter detalhes.
+
+Em seguida, no software coletor, selecione Adicionar Provedor de Dados e, em seguida,
+
+Avaliador de Migração CSV, carregue o arquivo .csv e SALVAR.
+
+O sistema agora começará a adicionar os servidores de forma assíncrona, o que pode
+
+levar até 10 minutos para ser concluído. Repita esse
+
+processo para cada lista de servidores bare metal a serem incluídos na avaliação.
+
+Para verificar a conectividade de rede e as credenciais fornecidas anteriormente,
+
+selecione a exibição Bare Metals em Configurações do dispositivo. Navegue até um servidor que você gostaria
+
+de testar e selecione "Test Collection". Se o servidor relatar que não está íntegro,
+
+consulte os Requisitos do Sistema e o Guia de Instalação para
+
+idéias de solução de problemas .
+Configure Collection from Hyper-V Servers
+
+A Etapa Seis é configurar a coleção de hosts Hyper-V.
+
+Se você não tem uma infraestrutura Hyper-V para monitorar, pule para
+
+a próxima seção deste vídeo. No software coletor, adicione o
+
+provedor de dados e, em seguida, o Microsoft Hyper-V. Se você tiver um servidor Active Directory,
+
+selecione varredura do Active Directory, forneça um rótulo descritivo, o endereço
+
+do servidor Active Directory e credenciais somente leitura.
+
+Como alternativa, se um servidor Active Directory não estiver disponível,
+
+você pode revisar os Requisitos do Sistema e Guia de Instalação para criar um
+
+arquivo .csv contendo a lista de hosts a serem monitorados.
+
+Forneça um rótulo descritivo e carregue o .csv.
+
+O sistema agora começará a adicionar os servidores de forma assíncrona.
+
+Este ciclo inicial pode levar até 10 minutos para ser concluído.
+
+Você pode verificar se os hosts Hyper-V e suas máquinas virtuais foram
+
+descobertos selecionando Configurações do dispositivo na barra de navegação e selecionando
+
+a exibição do Hyper-V.
+
+O Sétimo Passo é habilitar a detecção automática da edição SQL.
+Configure SQL Server Discovery
+
+Se você não tiver instâncias do servidor SQL para descobrir,
+
+pule para a próxima seção deste vídeo.
+
+Comece adicionando uma ou mais credenciais T-SQL.
+
+Selecione Configurações globais na barra de navegação e na guia Credenciais do sistema operacional.
+
+Selecione Novo e, em seguida, T-SQL na lista suspensa de
+
+protocolo . Observe que contas de domínio não são
+
+suportadas no momento.
+
+Depois que as credenciais forem adicionadas, selecione a guia Coleção de SO.
+
+Para cada tipo de dados configurado (VMware, Adhoc
+
+ou Hyper-V), selecione "Verificar tudo" na parte superior para iniciar
+
+uma verificação do SQL Edition. A seleção de verificar tudo só é necessária para acelerar a
+
+descoberta durante o processo de instalação.
+Configure Virtual Machine OS Metric Collection
+
+A Etapa Oito é configurar opcionalmente o monitoramento da utilização de recursos diretamente
+
+das máquinas virtuais descobertas na infraestrutura
+
+VMware ou Hyper-V . Habilitar isso permite que o caso de negócios considere a utilização
+
+do ponto de vista do servidor, o que pode permitir o dimensionamento
+
+correto adicional . Selecionando Global Settings na
+
+barra de navegação e na guia OS Collection. Para cada tipo de dado configurado (VMware ou
+
+Hyper-V), configure WMI e / ou SNMP
+
+e salve. Observe que esta coleção aproveita as credenciais do sistema
+
+operacional configuradas na Etapa Quatro.
+
+Você pode adicionar credenciais adicionais a qualquer momento.
+Configure Synchronization with the Migration Evaluator Analytics Engine
+
+A Etapa Nove é uma configuração opcional para habilitar a sincronização com AWS.
+
+Isso permite que a equipe de serviço do Avaliador de migração forneça alertas se a
+
+coleta não estiver no escopo com a expectativa.
+
+As configurações de sincronização do Amazon S3 são baseadas nos detalhes do seu coletor
+
+listados no Migration Evaluator Management Console.
+
+Depois de configurado, selecione Iniciar backup agora para verificar se o backup e a
+
+sincronização estão funcionando.
+Annotating Discovered Inventory with Business Data and Provisioning
+
+Nossa última etapa será anotar o inventário descoberto com dados de negócios
+
+e provisionamento. Após alguns dias de coleta, navegue
+
+até Configurações globais na barra de navegação e selecione a guia backup e clique no botão
+
+Baixar inventário e exportação de utilização na parte inferior.
+
+Nas planilhas de Ativo virtual e físico, verifique se o inventário contém tudo o
+
+que se espera que esteja no escopo. Para servidores sem
+
+provisionamento físico detectado , preencha o máximo possível com valores aceitáveis ​​para modelagem.
+
+Para servidores de banco de dados, verifique e preencha a coluna Tipo de banco de dados onde necessário.
+
+Na planilha Asset Ownership, preencha o máximo possível,
+
+incluindo o ambiente lógico do servidor, fornecendo tags de
+
+produção versus desenvolvimento. Com essas tags, economias extras projetadas
+
+podem ser modeladas.
+
+Assim que suas anotações forem concluídas, carregue a pasta de trabalho do Excel atualizada para
+
+seu envolvimento no Console de gerenciamento do avaliador de migração
+
+em console.tsologic.com/discover/
+
+self-Reporting-
+
+files
+
+Obrigado por dedicar um tempo para assistir a nossa instalação e configuração do
+
+Migration Evaluator Software de coletor.
+
+Esperamos que você tenha achado útil percorrer o processo de instalação
+
+e configuração para garantir que está pronto para começar seu
+
+trabalho de avaliador de migração.
